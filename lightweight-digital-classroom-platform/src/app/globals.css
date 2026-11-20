@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --bg-page: #fafaf7;
+  --bg-card: #ffffff;
+  --text-primary: #182026;
+  --text-muted: #52606d;
+  --brand-primary: #0f766e;
+  --brand-primary-hover: #0d635d;
+  --brand-accent: #d97706;
+  --border-subtle: #e5e7eb;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Data Saver Mode: strip transitions, animations, and heavy shadows */
+body.data-saver *,
+body.data-saver *::before,
+body.data-saver *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Clean custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
